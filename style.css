@@ -1,0 +1,82 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+    /* background-color: rgb(0, 0, 0);    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #242024;
+}
+#tela{
+    position: relative;
+    width: 450px;
+    height: 500px;
+    color: #080303;
+    background:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:30px;
+    margin-top: 15px;
+    margin-left: 15px;
+    font: bold 2en "Century Gothic";
+    flex-direction: column;
+    padding: 50px;
+
+}
+#tela::before, #tela::after{
+    content: "";
+    border-radius: 40px;
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000);
+    background-size: 300%;
+    animation: AnimarBorda 8s linear alternate infinite;
+}
+ #tela::after{
+    filter: blur(50px);
+ }
+.img{
+    width: 200px;
+    border-radius: 100px;
+    margin-bottom: 30px;
+
+
+}
+.texto{
+    margin-bottom: 30px;
+}
+.icone{
+    width: 50px;
+    outline: none; 
+}
+.button{
+    margin-right: 30px;
+    border-style: none;
+    background-color:#f8f8f8;
+    margin-top: 30px; 
+    
+}
+.midia{
+    display: flex;
+}
+.button:hover{
+    transform:translateY(-5px);
+    transition: .7s;
+    cursor: pointer;
+}
+
+@keyframes AnimarBorda{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 300%;
+    }
+}
