@@ -37,7 +37,7 @@ body{
     height: calc(100% + 30px);
     background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000);
     background-size: 300%;
-    animation: AnimarBorda 8s linear alternate infinite;
+    animation: AnimarBorda 4s linear alternate infinite;
 }
  #tela::after{
     filter: blur(50px);
